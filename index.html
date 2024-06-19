@@ -1,0 +1,200 @@
+<!-- Copyright (c) 2024 by Matthias Hurrle (https://codepen.io/atzedent/pen/KKYNpEd)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="one.png">
+  <title>Lucky Dice</title>
+</head>
+
+
+<body>
+  <!--// 
+Your challenge:
+* Simplify HTML by removing all face div
+* Remove JS
+* Randomize rotation
+* Randomize path speed
+* Use SCSS to allow parameters such as number and size of the dices
+* Add timeout to "stop the dices"
+//-->
+  <div id="particles-js"></div>
+
+  <div class="infinity-path">
+    <div class="dice1">
+      <div class="face face1">B</div>
+      <div class="face face2">A</div>
+      <div class="face face3">S</div>
+      <div class="face face4">E</div>
+      <div class="face face5">8</div>
+      <div class="face face6">8</div>
+    </div>
+    <div class="dice2">
+      <div class="face face1">1</div>
+      <div class="face face2">2</div>
+      <div class="face face3">3</div>
+      <div class="face face4">4</div>
+      <div class="face face5">5</div>
+      <div class="face face6">6</div>
+    </div>
+    <div class="dice3">
+      <div class="face face1">1</div>
+      <div class="face face2">2</div>
+      <div class="face face3">3</div>
+      <div class="face face4">4</div>
+      <div class="face face5">5</div>
+      <div class="face face6">6</div>
+    </div>
+  </div>
+  <h1>
+    <font style="color: rgb(218, 218, 42);">Lucky</font> Dice
+  </h1>
+  <div class="tokeno">TOKENOMICS
+    <h3>
+      LP 95%
+    </h3>
+    <h3>
+      LOCK 30 Days
+    </h3>
+    <h3>
+      7777777777 Supply
+    </h3>
+    <h3>
+      Renounced Owner of Contract
+    </h3>
+  </div>
+  <div class="tokeno2">WHO IS LUCKY ?
+    <h3>
+      Comment on the twitter post and get 0.1 % rewarded until 24/06/2024 !
+    </h3>
+  </div>
+  <div class="contract">
+      CA: 0x000000000000000
+  </div>
+  <div class="socilas">
+
+    <!-- <a href="https://app.uniswap.org/swap" style="text-emphasis: none; color: rgb(255, 255, 255);"><i
+        class="fa fa-exchange socails"></i></a> -->
+    <a href="https://t.me/" style="color: rgb(255, 255, 255);"><i class="fa fa-telegram socails"></i></a>
+    <a href="https://x.com/" style="color: rgb(255, 255, 255);"><i class="fa fa-twitter socails"></i></a>
+    <a href="https://dexscreener.com/" style="color: rgb(255, 255, 255);"><img class="buttonimg"
+        src="dexbutton.png"></a>
+    <!-- <a href="https://coinmarketcap.com/" style="color: rgb(255, 255, 255);"><img class="buttonimg"
+        src="coinmarketcapbutton.png"></a> -->
+    <a href="https://www.dextools.io" style="color: rgb(255, 255, 255); padding: 0;"><img class="buttonimg"
+        src="dextoolsbutton.png"></a>
+  </div>
+  <script type="module" src="bundle.js"></script>
+  <script src="../particles.js"></script>
+  <script>/* ---- particles.js config ---- */
+
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 100,
+          "density": {
+            "enable": true,
+            "value_area": 1200
+          }
+        },
+        "color": {
+          "value": ["#aa73ff", "#f8c210", "#83d238", "#33b1f8"]
+        },
+
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#fff"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.6,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 2,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 120,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": false
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });</script>
+</body>
+
+
+</html>

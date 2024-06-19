@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111111;
+  font-family: "Zen Dots", sans-serif;
+  font-size: 72px;
+  font-weight: bold;
+}
+
+.infinity-path {
+  position: relative;
+  width: 60vw;
+  height: 80vh;
+}
+
+.dice, .dice1, .dice2, .dice3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  animation: rotateDice 4s linear infinite, moveInfinity 7s linear infinite;
+}
+
+.dice2, .dice3{
+  opacity: 0;
+}
+
+.dice2{
+  animation-delay: 1.4s;
+}
+
+.dice3{
+  animation-delay: 2.9s;
+}
+
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400% 400%;
+  border: 1px solid #ccc;
+  border-radius: 30%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6), 0 0 50px rgba(255, 255, 255, 0.4);
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rainbow 5s linear infinite;
+  transition: filter 0.3s ease;
+}
+
+.face:hover {
+  opacity: 1.0;
+  filter: brightness(2);
+  color: #FFF;
+}
+
+.face::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30%;
+  background: #fff6;
+  box-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.8),
+    0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 20px rgba(255, 255, 255, 0.4);
+  animation: sparkle 1.5s infinite ease-in-out;
+}
+
+.face1 { transform: rotateY(0deg) translateZ(50px); }
+.face2 { transform: rotateY(90deg) translateZ(50px); }
+.face3 { transform: rotateY(180deg) translateZ(50px); }
+.face4 { transform: rotateY(-90deg) translateZ(50px); }
+.face5 { transform: rotateX(90deg) translateZ(50px); }
+.face6 { transform: rotateX(-90deg) translateZ(50px); }
+
+@keyframes rotateDice {
+  from { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  to { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+@keyframes moveInfinity {
+  0% { top: 50%; left: 0; }
+  25% { top: 0; left: 50%; }
+  50% { top: 50%; left: 100%; }
+  75% { top: 100%; left: 50%; }
+  100% { top: 50%; left: 0; }
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+h1{
+  position: absolute;
+  top:  0;
+  left: 2%;
+  margin-top: 21%;
+  width: 70%;
+
+  color: rgb(255, 255, 255);
+}
+
+.socilas {
+  top: 0;
+  right:2%;
+  display: block;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  margin-top: 21%;
+  font-size: 105px;
+}
+#particles-js {
+  display: block;
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.tokeno{
+  text-align: center;
+  display: block;
+  position: absolute;
+  top:0;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(218, 218, 42);
+  margin-top: 31%;
+  width: 60%;
+  border-style: groove;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: rgba(53, 1, 102, 0.507);
+  font-size: 55px;
+}
+
+.tokeno2{
+  text-align: center;
+  display: block;
+  position: absolute;
+  top:0;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(218, 218, 42);
+  margin-top: 5%;
+  width: 60%;
+  border-style: groove;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: rgba(53, 1, 102, 0.486);
+  font-size: 55px;
+}
+
+h3{
+  margin-top: 0%;
+  margin-bottom: 0%;
+  color: #a0ffb8;
+  font-size: 35px;
+}
+
+.contract{
+  text-align: center;
+  display: block;
+  position: absolute;
+  top:0;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(218, 218, 42);
+  margin-top: 47%;
+  width: 60%;
+  border-style: groove;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: rgba(53, 1, 102, 0.486);
+  font-size: 23px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  h1{
+    width: 70%;
+  }
+  .socilas{
+    margin-top: 60%;
+  }
+  .tokeno{
+    right: 0;
+    margin-top: 80%;
+  }
+  .tokeno2{
+    left: 0;
+    margin-top: 120%;
+  }
+  .contract{
+    margin-top: 170%;
+  }
+}
